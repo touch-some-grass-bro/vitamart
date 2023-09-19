@@ -1,9 +1,11 @@
 <script>
- import Button from './compontents/Button.svelte'
+  import TailwindCss from './lib/TailwindCSS.svelte';
 </script>
 
+<TailwindCss/>
+
 <main>
-  <Button />
+
 </main>
 
 <style>
