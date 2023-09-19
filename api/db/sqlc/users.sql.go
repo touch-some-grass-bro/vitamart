@@ -7,6 +7,7 @@ package db
 
 import (
 	"context"
+	"database/sql"
 )
 
 const createOrUpdateUser = `-- name: CreateOrUpdateUser :one
@@ -61,4 +62,18 @@ func (q *Queries) GetUser(ctx context.Context, email string) (User, error) {
 		&i.Hostel,
 	)
 	return i, err
+}
+
+const updateHostel = `-- name: UpdateHostel :exec
+UPDATE users SET hostel = $2 WHERE email = $1
+`
+
+type UpdateHostelParams struct {
+	Email  string         `json:"email"`
+	Hostel sql.NullString `json:"hostel"`
+}
+
+func (q *Queries) UpdateHostel(ctx context.Context, arg UpdateHostelParams) error {
+	_, err := q.db.ExecContext(ctx, updateHostel, arg.Email, arg.Hostel)
+	return err
 }

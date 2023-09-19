@@ -25,7 +25,7 @@ func (s *Server) HandleRoutes(mainRouter *chi.Mux) {
 	)
 
 	authRouter.Get("/callback",
-		handlers.CallbackHandler( s.Queries,
+		handlers.CallbackHandler(s.Queries,
 			s.OauthConf,
 		),
 	)
@@ -34,8 +34,22 @@ func (s *Server) HandleRoutes(mainRouter *chi.Mux) {
 		handlers.LogoutHandler(),
 	)
 
-  authRouter.Get("/test", handlers.LogoutHandler())
+	authRouter.Get("/is-authenticated",
+		handlers.IsAuthenticatedHandler(s.Queries),
+	)
 
+	// Items
+	vitamartRouter.Get("/items", handlers.GetItemsHandler(s.Queries))
+	vitamartRouter.Post("/items", handlers.AddItemHandler(s.Queries))
+
+  // Transactions
+  vitamartRouter.Get("/buy", handlers.BuyItemHandler(s.Queries))
+  vitamartRouter.Get("/setToSold", handlers.SetProductToSoldHandler(s.Queries))
+
+  // Hostel
+	vitamartRouter.Post("/hostel", handlers.SetHostel(s.Queries))
+
+	// Mounting
 	vitamartRouter.Mount("/auth", authRouter)
 
 	mainRouter.Mount("/api", vitamartRouter)

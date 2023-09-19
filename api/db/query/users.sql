@@ -11,3 +11,6 @@ RETURNING * ;
 SELECT * FROM users 
 WHERE email = $1
 LIMIT 1;
+
+-- name: UpdateHostel :exec
+UPDATE users SET hostel = $2 WHERE email = $1;

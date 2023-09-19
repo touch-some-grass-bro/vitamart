@@ -19,6 +19,23 @@ type GoogleToken struct {
 	TokenType    string    `json:"tokenType"`
 }
 
+type Item struct {
+	ID          int64     `json:"id"`
+	Name        string    `json:"name"`
+	Description string    `json:"description"`
+	ImageBinary []byte    `json:"imageBinary"`
+	Price       int32     `json:"price"`
+	SellerEmail string    `json:"sellerEmail"`
+	Issold      bool      `json:"issold"`
+	CreatedAt   time.Time `json:"createdAt"`
+}
+
+type Transaction struct {
+	ID         int64  `json:"id"`
+	ItemID     int64  `json:"itemID"`
+	BuyerEmail string `json:"buyerEmail"`
+}
+
 type User struct {
 	Email             string         `json:"email"`
 	Name              string         `json:"name"`
