@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-  import { Router, Route, Link } from "svelte-routing";
+  import { Router, Route } from "svelte-routing";
   import Login from "./layouts/Login.svelte";
   import Gender from "./layouts/Gender.svelte";
   import Buy from "./layouts/Buy.svelte";

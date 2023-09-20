@@ -2,19 +2,21 @@
     import TailwindCss from '../lib/TailwindCSS.svelte';
   import HeaderSell from '../components/HeaderSell.svelte';
 
-  let sellname = '';
-  let roomname = '';
+//   let sellname = '';
+  
   let prodname = '';
   let proddes = '';
   let price = '';
+  let propic = '';
 
   function handleSubmit() {
     // Handle the form submission here
-    console.log('First Name:', sellname);
-    console.log('Room name:', roomname);
+    // console.log('First Name:', sellname);
+    
     console.log('Product name', prodname);
     console.log('Product description', proddes);
     console.log('Price', price);
+    console.log('Product Picture', propic);
   }
 </script>
 
@@ -29,11 +31,11 @@
         <p class="Heading text-white">SELL</p>
         <div>
             <form on:submit={handleSubmit}>
-                <label class="texthere" for="sellname">Seller's Name</label>
+                <!-- <label class="texthere" for="sellname">Seller's Name</label>
                 <input type="text" id="sellname" bind:value={sellname} /><br>
 
                 <label class="texthere" for="roomname">Room Number</label>
-                <input type="text" id="roomname" bind:value={roomname} /><br>
+                <input type="text" id="roomname" bind:value={roomname} /><br> -->
 
                 <label class="texthere" for="prodname">Product Name</label>
                 <input type="text" id="prodname" bind:value={prodname} /><br>
@@ -44,7 +46,10 @@
                 <label class="texthere" for="price">Price</label>
                 <input type="text" id="price" bind:value={price} /><br>
                 
-                <button type="submit">Submit</button>
+                <label class="texthere" for="propic"></label>
+                <input type="file" id="propic" bind:value={propic} /><br>
+
+                <button class="BuTTon" type="submit">Submit</button>
               </form>
 
               
@@ -65,6 +70,12 @@
         margin: 0 auto;
         padding: 2rem;
         text-align: center;
+    }
+    .BuTTon{
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 100px;
+        border-radius: 30px;
+        border-color: rgb(193,226,0);
     }
     .Heading{
         font-family: 'Shadows Into Light', cursive;
