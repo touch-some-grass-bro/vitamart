@@ -73,37 +73,6 @@
         top: 24px;
         right: 16px;
     }
-    .Join {
-        background-color: white;
-        color: rgb(41, 118, 211);
-        border-color: rgb(41, 118, 211);
-        border-style: solid;
-        border-width: 1.5px;
-        /* border: medium; */
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 9px;
-        padding-bottom: 9px;
-        border-radius: 2px;
-        cursor: pointer;
-        transition: background-color 0.6s,
-            color 0.6s;
-    }
-    .Join:hover{
-        color: white;
-        background-color: rgb(41, 118, 211);
-        }
-        .Join:active{
-        opacity: .7;
-        }
-        .Main_Image{
-            border-radius: 0px 0px 400px 0px;
-        }
-        .Heading{
-            font-family: 'Shadows Into Light', cursive;
-            font-size: 100px;
-    }
-
     .SUB {
         background-color: rgb(200, 0, 0);
         color: white;
