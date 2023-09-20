@@ -1,26 +1,17 @@
 <script>
   import TailwindCss from "../lib/TailwindCSS.svelte";
   import HeaderBuy from "../components/HeaderBuy.svelte";
-  let sellerdetail = [
-    { name: "Param", price: 1200 },
-    { name: "Milind", price: 300 },
-    { name: "Ishaan", price: 50 },
-    { name: "Param", price: 1200 },
-    { name: "Milind", price: 300 },
-    { name: "Ishaan", price: 50 },
-    { name: "Param", price: 1200 },
-    { name: "Milind", price: 300 },
-    { name: "Ishaan", price: 50 },
-    { name: "Param", price: 1200 },
-    { name: "Milind", price: 300 },
-    { name: "Ishaan", price: 50 },
-    { name: "Param", price: 1200 },
-    { name: "Milind", price: 300 },
-    { name: "Ishaan", price: 50 },
-    { name: "Param", price: 1200 },
-    { name: "Milind", price: 300 },
-    { name: "Ishaan", price: 50 },
-  ];
+
+  import axios from "axios";
+
+  let products = [];
+
+  import API_URL from "../api";
+
+  axios.get(API_URL + "/items", { withCredentials: true }).then((res) => {
+    products = res.data;
+  });
+
   let buy = "../public/buy.jpg";
   let scrollAmount = 0;
 
@@ -51,11 +42,11 @@
   <div class="product-carousel">
     <button class="mx-5" on:click={scrollPrev}>Previous</button>
     <div class="product-list" id="productList">
-      {#each sellerdetail as seller}
+      {#each products as product}
         <div class="product-item">
-          <img src="../public/sample.jpg" />
-          <h4>{seller.name}</h4>
-          <h5>{seller.price}</h5>
+          <img src={'data:image/jpeg;base64,' + product.imageBinary} />
+          <h4>{product.name}</h4>
+          <h5>{product.price}</h5>
         </div>
       {/each}
       <!-- Add more products as needed -->
