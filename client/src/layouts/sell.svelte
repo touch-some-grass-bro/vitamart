@@ -1,6 +1,12 @@
 <script>
     import TailwindCss from '../lib/TailwindCSS.svelte';
   import HeaderSell from '../components/HeaderSell.svelte';
+  let userInput = ''; // Initialize a variable to store the user's input
+  
+    function handleSubmit() {
+      // Handle the form submission here, you can access userInput to get the input value
+      console.log('User input:', userInput);
+      }
 </script>
 
 <TailwindCss/>
@@ -11,14 +17,18 @@
     <div class="SellDiv">
         <p class="Heading text-white">SELL</p>
         <div>
-            <div class="texthere flex-2">Seller's Name <input type="text" class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Room Number <input class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Product Name <input class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Product Description <input class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Price <input class="px-16 text-xl font-semibold text-black "></div>
-            <div><input type="file"></div>
-            <div><button class="SUB">Submit</button> </div>
-            
+            <form on:submit={handleSubmit}>
+                <label class="texthere" for="inputField">Seller's Name</label>
+                <input type="text" id="inputField" bind:value={userInput} /><br>
+                <label class="texthere" for="inputField">Room Number</label>
+                <input type="text" id="inputField" bind:value={userInput} /><br>
+                <label class="texthere" for="inputField">Product Name</label>
+                <input type="text" id="inputField" bind:value={userInput} /><br>
+                <label class="texthere" for="inputField">Product Description</label>
+                <input type="text" id="inputField" bind:value={userInput} /><br>
+                <label class="texthere" for="inputField">Price</label>
+                <input type="text" id="inputField" bind:value={userInput} /><br>
+              </form>
         </div>
     </div>
 </main>     

@@ -8,15 +8,15 @@
 <main>
     <ul class="hList">
         <li>
-          <button on:click={handleclick} class="menu">
+          <div class="menu">
             <img src="{img}">
             <h2 class="menu-title">{name}</h2>
             <ul class="menu-dropdown  max-h-[30vh] overflow-y-scroll overflow-x-hidden">
                 {#each hostels as hostel}
-                    <li>{hostel}</li>
+                    <li><button>{hostel}</button></li>
                 {/each}
             </ul>
-        </button>
+        </div>
         </li>
       </ul>
 </main>
