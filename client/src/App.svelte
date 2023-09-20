@@ -4,27 +4,16 @@
 
   import { Router, Route, Link } from "svelte-routing";
   import Login from "./layouts/Login.svelte";
-  import HostelPage from "./layouts/HostelPageog.svelte";
   import Gender from "./layouts/Gender.svelte";
+  import Buy from "./layouts/Buy.svelte";
 </script>
 
 <Router>
 
-{#if location.pathname !== '/login' && location.pathname !== '/hostel'}
-  <Link to="/login">LOGIN</Link>
-{/if}
-
-{#if location.pathname !== '/login' && location.pathname !== '/hostel'}
-  <Link to="/hostel">HOSTEL</Link>
-{/if}
-{#if location.pathname !== '/login' && location.pathname !== '/hostel'}
-  <Link to="/gender">Gender</Link>
-{/if}
-
   <main>
     <Route path="login"> <Login/> </Route>
-    <Route path="hostel"> <HostelPage/> </Route>
     <Route path="gender"> <Gender/> </Route>
+    <Route path="buy"> <Buy/> </Route>
   </main>
 </Router>
 
