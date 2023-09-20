@@ -1,10 +1,11 @@
 <script>
     import TailwindCss from '../lib/TailwindCSS.svelte';
-    let HOSTELS = ["A","B","C","D","D Annex","E","F","G","H","J","K","L","M","N","P","Q","R"];
-</script>
-<TailwindCss/>
-
-<main>
+  </script>
+  
+  <TailwindCss/>
+  
+  <main>
+  
     <header class="flex h-60px align-middle">
         <div><img class="h-36 my-0" src="../public/Logo.svg"></div>
         <div class="my-auto"><h1 class="text-5xl font-bold">VITAMART</h1></div>
@@ -13,9 +14,33 @@
             <a>Sign Out</a>
         </div>
     </header>
-</main>
-<style>
-        a {
+  
+    <div class="DIV1 py-20 px-56 rounded-lg ">
+      <p class="text-4xl font-semibold text-white text-center">Choose Your Hostel</p><br>
+      <div class = "Div2 flex">
+        <button class="px-16 text-xl font-semibold text-white "><img class="px-18 w-64" src="../public/male.svg">BOYS</button>
+        <button class="px-16 ml-auto font-semibold text-xl text-white"><img class="w-64" src="../public/female.svg">GIRLS</button>
+      </div>
+    </div>
+  </main>
+  
+  <style>
+    .DIV1{
+      box-shadow: 9px 10px 7px 1px rgba(38,38,38,0.94);
+      background-color: rgb(46,79,79);
+    }
+      button:hover{
+        box-shadow: 9px 10px 7px 1px rgba(38,38,38,0.54);
+        transition: box-shadow 0.25s ease-in-out;
+      }
+    button{
+      background-color: rgb(193,226,0);
+    }
+    h1{
+      font-size: 50px;
+      color:rgb(193,226,0);
+    }
+    a {
             font-size: 30px;
             text-decoration: none;
             color: black;
@@ -45,32 +70,4 @@
         a:hover{
             cursor: pointer;
         }
-        .maindiv{
-            box-shadow: 9px 10px 7px 1px rgba(38, 38, 38, 0.94);
-            background-color: rgb(46, 79, 79);
-        }
-        .divinside{
-            background-color: rgb(36, 60, 60);
-            position: relative;
-            overflow: hidden;
-            transition: background-position 0.3s ease;
-        }
-        .divinside::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: rgb(107, 142, 142);
-            transition: height 0.3s ease;
-        }
-
-        .divinside:hover::before {
-            height: 100%;
-        }
-
-        .divinside:hover{
-            cursor: pointer;
-        }
-</style>
+  </style>
