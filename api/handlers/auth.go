@@ -101,24 +101,27 @@ func CallbackHandler(queries *db.Queries, oauthConf *oauth2.Config) http.Handler
 			return
 		}
 
-		http.Redirect(w, r, models.Config.API.FrontendUrl, http.StatusFound)
+		if user.Hostel.Valid {
+			http.Redirect(w, r, models.Config.API.FrontendUrl+"/buy", http.StatusFound)
+		} else {
+			http.Redirect(w, r, models.Config.API.FrontendUrl+"/gender", http.StatusFound)
+		}
 	}
 }
-
 
 func LogoutHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 
 		var resp map[string]interface{} = make(map[string]interface{})
 
-		err := utils.SetJWTOnCookie("69420", time.Now(), time.Now(), w)
+		err := utils.SetJWTOnCookie("69420", time.Now().Add(time.Duration(5)), time.Now(), w)
 		if err != nil {
 			resp["error"] = err.Error()
 			utils.JSON(w, http.StatusInternalServerError, resp)
 			return
 		}
 
-		http.Redirect(w, r, models.Config.API.FrontendUrl, http.StatusFound)
+		http.Redirect(w, r, models.Config.API.FrontendUrl + "/login", http.StatusFound)
 	}
 }
 
@@ -169,4 +172,3 @@ func IsAuthenticatedHandler(queries *db.Queries) http.HandlerFunc {
 		utils.JSON(w, http.StatusOK, resp)
 	}
 }
-
