@@ -20,25 +20,27 @@
       <button class="started rounded-xl  text-white px-5 py-3 mt-2">Get Started</button>
   </div>
 
+  <div> <h3 class="font-bold text-white ">Key Features:</h3> </div>
   <div class="flex justify-between mx-5 py-5 gap-5">
-  <div class="text-left smoldiv text-white text-3xl">  
-    <h2>
-    <h3 class="font-bold">Key Features:</h3>
-    <br>
-    <br>
-    1. Easy Registration: Signing up for VitaMart is a breeze. Use your college email to create an account and join the bustling virtual marketplace. 
-    <br>
-    2. Customized Listings: List your items with ease, adding detailed descriptions, high-quality photos, and your asking price.
-    <br>
-    3.Secure Messaging: Connect with buyers or sellers through our built-in messaging system.
-    <br>
-    4.Verified Profiles: Trust and transparency are essential.
-    <br>
-    <br>
-    Whether you're looking to satisfy your hunger pangs ,find affordable textbooks or get your DA's completed. VitaMart is the digital bazaar that connects buyers and sellers within the cozy confines of your campus accommodation.
+    <div class="text-left smoldiv text-white text-2xl">  
+      <h2>
+      
+    
+    <div>
+      1. Easy Registration: Signing up for VitaMart is a breeze. Use your college email to create an account and join the bustling virtual marketplace. 
+      <br>
+      2. Customized Listings: List your items with ease, adding detailed descriptions, high-quality photos, and your asking price.
+      <br>
+      3.Secure Messaging: Connect with buyers or sellers through our built-in messaging system.
+      <br>
+      4.Verified Profiles: Trust and transparency are essential.
+      <br>
+      <br>
+      Whether you're looking to satisfy your hunger pangs ,find affordable textbooks or get your DA's completed. VitaMart is the digital bazaar that connects buyers and sellers within the cozy confines of your campus accommodation.
+    </div>
   </h2>
   </div>
-  <div class="text-center smoldiv text-white text-3xl">
+  <div class="text-left smoldiv2 text-white text-2xl">
     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa modi iure consectetur, cumque dicta impedit amet. Necessitatibus laboriosam earum ratione ipsa cumque ipsam quibusdam, perspiciatis libero, qui soluta molestias consequatur!</h2>
   </div>
 </div>
@@ -86,5 +88,8 @@
 
   a:hover{
     color: #5a8181;
+  }
+  .smoldiv2{
+    
   }
 </style>
