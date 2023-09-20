@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"io"
 	"net/http"
 	"strconv"
@@ -29,8 +28,6 @@ func AddItemHandler(queries *db.Queries) http.HandlerFunc {
 			utils.JSON(w, status, resp)
 			return
 		}
-
-		fmt.Println(email)
 
 		// Parse the mutlipart form data
 		err = r.ParseMultipartForm(32 << 20)
@@ -101,14 +98,12 @@ func GetItemsHandler(queries *db.Queries) http.HandlerFunc {
 			return
 		}
 
-		email, errMsg, status := utils.GetUserEmailFromJWT(jwtTokenCookie.Value)
+		_, errMsg, status := utils.GetUserEmailFromJWT(jwtTokenCookie.Value)
 		if errMsg != "" {
 			resp["error"] = errMsg
 			utils.JSON(w, status, resp)
 			return
 		}
-
-		fmt.Println(email)
 
 		var offset int
 
