@@ -1,8 +1,6 @@
 package models
 
 import (
-	"fmt"
-
 	"github.com/gorilla/websocket"
 	"github.com/rs/zerolog/log"
 )
@@ -101,22 +99,10 @@ func (h *ChatHub) Run() {
 }
 
 func (h *ChatHub) BroadcastMessage(room *Room, message *Message) {
-	fmt.Println("Broadcasting message", message.Content, "to room", room.ID)
-	fmt.Println("Message sender", message.Email)
-	if room.BuyerClient != nil {
-
-		fmt.Println("Buyer", room.BuyerClient.Email)
-	}
-	if room.SellerClient != nil {
-		fmt.Println("Seller", room.SellerClient.Email)
-	}
-
 	if room.BuyerClient != nil && room.BuyerClient.Email != message.Email {
-		fmt.Println("Sending the message", message.Content, "to the buyer")
 		room.BuyerClient.Message <- message
 	}
 	if room.SellerClient != nil && room.SellerClient.Email != message.Email {
-		fmt.Println("Sending the message", message.Content, "to the seller")
 		room.SellerClient.Message <- message
 	}
 }

@@ -2,7 +2,7 @@
     import TailwindCss from '../lib/TailwindCSS.svelte';
     import Dropdown from '../components/Dropdown.svelte';
     import HeaderCopy from '../components/HeaderCopy.svelte';
-    let MENHOSTELS = ["A","B","C","D","D Annex","E","F","G","H","J","K","L","M","N","P","Q","R"];
+    let MENHOSTELS = ["A","B","D","D Annex","E","F","G","H","J","K","L","M","N","P","Q","R"];
     let FEMHOSTELS = ["A","B","C","D","E","F","G","H"];
   </script>
   

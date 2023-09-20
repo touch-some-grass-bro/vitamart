@@ -1,5 +1,19 @@
 <script>
   import TailwindCss from '../lib/TailwindCSS.svelte';
+  import axios from 'axios'
+  import API_URL from '../api.js'
+
+  const signInWithGoogle = () => {
+    axios
+      .get(API_URL + '/auth/url')
+      .then((res) => {
+        // console.log
+        window.location.href = res.data.url
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 </script>
 
 <TailwindCss/>
@@ -9,7 +23,7 @@
       <h1 class="">VITAMART</h1>
       <p class="text-white">Feast. Share. Connect</p>
       <img class="h-80 m-auto" src="../public/Logo.svg">
-      <button class="px-36 py-4 m-auto text-white">SignIn with Google</button>
+      <button class="px-36 py-4 m-auto text-white" on:click={signInWithGoogle}>SignIn with Google</button>
   </div>
 </main>
 
