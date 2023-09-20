@@ -1,5 +1,5 @@
 <script>
-// @ts-nocheck
+  // @ts-nocheck
 
   import { Router, Route } from "svelte-routing";
   import Login from "./layouts/Login.svelte";
@@ -10,7 +10,6 @@
 </script>
 
 <Router>
-
   <main>
     <Route path="/"> <Login/> </Route>
     <Route path="gender"> <Gender/> </Route>

@@ -125,6 +125,12 @@ func (c *ChatClient) WriteMessage() {
 
 func (c *ChatClient) ReadMessage(hub *ChatHub) {
 	defer func() {
+		if err := recover(); err != nil {
+			log.Info().Err(err.(error)).Msg("Recovered from panic")
+		}
+	}()
+
+	defer func() {
 		hub.Unregister <- c
 		c.Conn.Close()
 	}()
@@ -139,6 +145,7 @@ func (c *ChatClient) ReadMessage(hub *ChatHub) {
 
 		msg := &Message{
 			Email:   c.Email,
+			Name:    c.Name,
 			RoomId:  c.RoomId,
 			Content: string(m),
 		}
