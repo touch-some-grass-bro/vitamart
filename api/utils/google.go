@@ -46,13 +46,6 @@ func GetGoogleProfile(accessToken, tokenType string) (*models.GoogleAuthResponse
 	return &googleUser, nil
 }
 
-// func RefreshSpotifyToken(refresh_token string) (*db.CreateOrUpdateGoogleTokensParams, error) {
-//   // TODO: Kya karu iska
-// }
-
-// func GetOrUpdateSpotifyToken(spotifyId string, queries *db.Queries, ctx context.Context, w http.ResponseWriter) (*db.SpotifyToken, error) {
-// }
-
 func RefreshGoogleToken(refresh_token string) (*db.CreateOrUpdateGoogleTokensParams, error) {
 	reqBody := url.Values{
 		"grant_type":    {"refresh_token"},
@@ -61,7 +54,7 @@ func RefreshGoogleToken(refresh_token string) (*db.CreateOrUpdateGoogleTokensPar
 		"client_secret": {models.Config.Google.ClientSecret},
 	}
 
-	req, err := http.NewRequest("POST", "https://oauth2.googleapis.com/token", strings.NewReader(reqBody.Encode()))
+	req, err := http.NewRequest("POST", "https://www.googleapis.com/oauth2/v4/token", strings.NewReader(reqBody.Encode()))
 
 	if err != nil {
 		return nil, err
