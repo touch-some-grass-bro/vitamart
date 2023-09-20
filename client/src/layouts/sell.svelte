@@ -28,15 +28,6 @@
     <div class="SellDiv">
         <p class="Heading text-white">SELL</p>
         <div>
-            <!-- <select class="px-4 py-3 rounded-full">
-                <div class="texthere flex-2">Seller's Name <input type="text" class="px-16 text-xl font-semibold text-black "></div>
-                <div class="texthere flex-2">Room Number <input class="px-16 text-xl font-semibold text-black "></div>
-                <div class="texthere flex-2">Product Name <input class="px-16 text-xl font-semibold text-black "></div>
-                <div class="texthere flex-2">Product Description <input class="px-16 text-xl font-semibold text-black "></div>
-                <div class="texthere flex-2">Price <input class="px-16 text-xl font-semibold text-black "></div>
-                <div><input type="file"></div>
-                <div><button class="SUB">Submit</button> </div>
-            </select> -->
             <form on:submit={handleSubmit}>
                 <label class="texthere" for="sellname">Seller's Name</label>
                 <input type="text" id="sellname" bind:value={sellname} /><br>
