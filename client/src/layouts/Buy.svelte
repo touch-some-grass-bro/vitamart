@@ -38,7 +38,7 @@
 
 <main>
   <HeaderBuy />
-  <h1 class="text-white text-3xl text-center">Products being sold</h1>
+  <h1 class=" text-3xl text-center">Products being sold</h1>
   <div class="product-carousel">
     <button class="mx-5" on:click={scrollPrev}>Previous</button>
     <div class="product-list" id="productList">
@@ -56,6 +56,10 @@
 </main>
 
 <style>
+  main{
+    height: max-content;
+    background-color: white;
+  }
   .product-carousel {
     display: flex;
     align-items: center;
@@ -81,7 +85,7 @@
 
   button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #5a8181;
     color: white;
     border: none;
     border-radius: 5px;
@@ -89,7 +93,7 @@
   }
 
   button:hover {
-    background-color: #0056b3;
+    background-color: #2b6969;
   }
   h1 {
     font-family: "Shadows Into Light", cursive;

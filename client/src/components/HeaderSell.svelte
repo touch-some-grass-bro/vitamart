@@ -1,9 +1,8 @@
 <script>
-  import { link, navigate } from "svelte-routing";
   import axios from "axios";
-  import API_URL from "../api";
+  import { link, navigate } from "svelte-routing";
 
-  export let img = "";
+  import API_URL from "../api";
 
   const logoutOutHandler = () => {
     window.location.href = `${API_URL}/auth/logout`;
@@ -13,11 +12,11 @@
 <main>
   <div class="header">
     <div class="header-content align-text-top">
-      <div><img class="h-36 my-0" src="../public/Logo.svg" alt="Logo" /></div>
+      <div><img class="h-36 my-0" src="../public/LOGO.png" alt="Logo" /></div>
       <div class="my-auto"><h1 class="text-5xl font-bold">VITAMART</h1></div>
       <div class="my-auto ml-auto flex">
         <a href="/gender" use:link>Change Hostel Details</a>
-        <button on:click={logoutOutHandler} class="link">Sign Out</button>
+        <button on:click={logoutOutHandler}>Sign Out</button>
       </div>
     </div>
   </div>
@@ -46,13 +45,13 @@
   h1 {
     font-family: "SKranji", cursive;
     font-size: 50px;
-    color: rgb(193, 226, 0);
+    color: #2b6969;
   }
 
   a {
     font-size: 30px;
     text-decoration: none;
-    color: white;
+    color: #2b6969;
     position: relative;
     margin: auto 15px;
   }
@@ -64,7 +63,7 @@
     height: 2px; /* Set the desired underline thickness */
     bottom: 0;
     left: 0;
-    background-color: white; /* Set the desired underline color */
+    background-color: #2b6969; /* Set the desired underline color */
     transform: scaleX(0); /* Initial state: no underline */
     transform-origin: bottom right;
     transition: transform 0.3s ease; /* Add a smooth transition */
@@ -83,7 +82,7 @@
   button {
     font-size: 30px;
     text-decoration: none;
-    color: white;
+    color: #2b6969;
     position: relative;
     margin: auto 15px;
   }
@@ -95,7 +94,7 @@
     height: 2px; /* Set the desired underline thickness */
     bottom: 0;
     left: 0;
-    background-color: white; /* Set the desired underline color */
+    background-color: #2b6969; /* Set the desired underline color */
     transform: scaleX(0); /* Initial state: no underline */
     transform-origin: bottom right;
     transition: transform 0.3s ease; /* Add a smooth transition */

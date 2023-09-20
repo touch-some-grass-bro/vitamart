@@ -45,21 +45,15 @@
 <main>
   <HeaderSell />
 
-  <p class="text">Hungry,Grab a snickers.</p>
 
   <div class="SellDiv">
-    <p class="Heading text-white">SELL</p>
+    <p class="Heading">SELL</p>
     <div>
       <form
         on:submit|preventDefault={(e) => {
           handleSubmit(e);
         }}
       >
-        <!-- <label class="texthere" for="sellname">Seller's Name</label>
-                <input type="text" id="sellname" bind:value={sellname} /><br>
-
-                <label class="texthere" for="roomname">Room Number</label>
-                <input type="text" id="roomname" bind:value={roomname} /><br> -->
 
         <label class="texthere" for="prodname">Product Name</label>
         <input type="text" id="prodname" bind:value={prodname} /><br />
@@ -72,7 +66,7 @@
 
         <label class="texthere" for="propic" />
         <!-- Make an input that takes an image and gets the file data -->
-        <input type="file" id="propic" bind:value={propic} /><br />
+        <input class="onlyimput" type="file" id="propic" bind:value={propic} /><br />
 
         <button class="BuTTon" type="submit">Submit</button>
       </form>
@@ -97,8 +91,20 @@
     font-family: "Shadows Into Light", cursive;
     font-size: 100px;
     border-radius: 30px;
-    border-color: rgb(193, 226, 0);
+    border-color: #5a8181;
   }
+  input{ 
+    margin-left: 10px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #5a8181;
+  }
+
+  .onlyimput{
+    background-color: white;
+    border-radius: 0px;
+  }
+ 
   .Heading {
     font-family: "Shadows Into Light", cursive;
     font-size: 100px;
@@ -122,11 +128,7 @@
     opacity: 0.4;
   }
   .texthere {
-    color: rgb(193, 226, 0);
     font-size: 50px;
   }
 
-  p.text {
-    writing-mode: vertical-rl;
-  }
 </style>

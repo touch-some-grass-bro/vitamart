@@ -57,7 +57,7 @@
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
   img {
-    background-color: #8db842;
+    background-color: #ccdbdb;
   }
 
   html {
@@ -89,7 +89,7 @@
     width: 150px;
     height: 40px;
     padding: 12px 0 0;
-    background: #9dc852;
+    background: #5a8181;
     text-align: center;
     color: #fff;
     font-weight: bold;
@@ -100,7 +100,7 @@
     content: "";
     display: block;
     height: 0;
-    border-top: 5px solid #9dc852;
+    border-top: 5px solid #5a8181;
     border-left: 75px solid transparent;
     border-right: 75px solid transparent;
     border-bottom: 0 solid #ddd;
@@ -111,10 +111,10 @@
     transition: 0.2s 0.2s border-top ease-out, 0.3s border-top-color;
   }
   .menu-title:hover {
-    background: #8db842;
+    background: #2b6969;
   }
   .menu-title:hover:before {
-    border-top-color: #8db842;
+    border-top-color: #5a8181;
   }
   .menu:hover > .menu-title:before {
     border-top-width: 0;

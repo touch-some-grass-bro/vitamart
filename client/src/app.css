@@ -26,7 +26,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgba(46, 79, 79, 75);
+  /* background-color: rgba(46, 79, 79, 75); */
+  background-color: EDF2F2;
+
 }
 
 h1 {

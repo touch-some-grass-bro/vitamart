@@ -4,7 +4,10 @@
   <TailwindCss/>
 <main>
   <header class="Header flex  justify-between fixed w-full">
-      <div class="mx-5"><button class="funt">VITAMART</button></div>
+      <div class="mx-5">
+
+        <button class="funt flex"><img src="../public/LOGO.png" class="h-20">VITAMART</button>
+      </div>
       <div class="mx-5 my-auto">
           <a href="#" class="px-7 text-2xl">Login</a>
           <button class="started rounded-xl text-white px-5 py-3">Get Started</button>
@@ -19,8 +22,8 @@
 
   <div class="flex justify-between mx-5 py-5 gap-5">
   <div class="text-left smoldiv text-white text-3xl">  
-    <h3>
-    Key Features:
+    <h2>
+    <h3 class="font-bold">Key Features:</h3>
     <br>
     <br>
     1. Easy Registration: Signing up for VitaMart is a breeze. Use your college email to create an account and join the bustling virtual marketplace. 
@@ -33,10 +36,10 @@
     <br>
     <br>
     Whether you're looking to satisfy your hunger pangs ,find affordable textbooks or get your DA's completed. VitaMart is the digital bazaar that connects buyers and sellers within the cozy confines of your campus accommodation.
-  </h3>
+  </h2>
   </div>
   <div class="text-center smoldiv text-white text-3xl">
-    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa modi iure consectetur, cumque dicta impedit amet. Necessitatibus laboriosam earum ratione ipsa cumque ipsam quibusdam, perspiciatis libero, qui soluta molestias consequatur!</h3>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa modi iure consectetur, cumque dicta impedit amet. Necessitatibus laboriosam earum ratione ipsa cumque ipsam quibusdam, perspiciatis libero, qui soluta molestias consequatur!</h2>
   </div>
 </div>
 
@@ -44,8 +47,16 @@
 
 <style>
  @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
- .smoldiv{
-
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+ main{
+  background-color: #2B6969;
+ }
+ h3,h2{
+  font-family: 'Montserrat', sans-serif;
+ }
+ h3{
+  margin-top: 20px;
+  font-size: 70px;
  }
  .Header{
   background-color: #2B6969;

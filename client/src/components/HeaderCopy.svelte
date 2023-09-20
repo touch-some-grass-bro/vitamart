@@ -12,7 +12,7 @@
 
 <main>
   <header class="header">
-    <div><img class="h-36 my-0" src="../public/Logo.svg" alt="Logo" /></div>
+    <div><img class="h-36 my-0" src="../public/LOGO.png" alt="Logo" /></div>
     <div class="my-auto"><h1 class="text-5xl font-bold">VITAMART</h1></div>
     <div class="my-auto ml-auto flex">
       <a href="/gender" use:link>Change Hostel Details</a>
@@ -29,6 +29,7 @@
     align-items: center;
     background-color: transparent;
     position: relative;
+    background-color: #2B6969;
   }
 
   .bgimg {
@@ -50,7 +51,7 @@
   h1 {
     font-family: "SKranji", cursive;
     font-size: 50px;
-    color: rgb(193, 226, 0);
+    color: #edf2f2;
   }
 
   a {
