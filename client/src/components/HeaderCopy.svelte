@@ -3,37 +3,41 @@
 </script>
 
 <main>
-        <div class="header">
-            <div class="header-content align-text-top">
+        <header class="header">
                 <div><img class="h-36 my-0" src="../public/Logo.svg" alt="Logo"></div>
                 <div class="my-auto"><h1 class="text-5xl font-bold">VITAMART</h1></div>
                 <div class="my-auto ml-auto flex">
                     <a>Change Hostel Details</a>
                     <a>Sign Out</a>
                 </div>
-            </div>
-        </div>
+        </header>
 </main>
 
 <style>
    @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
    
-
+   
    .header {
-        border-radius: 0 0 920px 0;
-        background-image: url('/public/buy.jpg');
-        background-size: cover;
-        height: 650px;
         display: flex;
         align-items: center;
-        padding-bottom: 27%;
-        margin-bottom: 50px;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .bgimg {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: -1; /* Place the image behind the header content */
+        border-radius: 0 0 50px 0;
     }
 
     .header-content {
         display: flex;
-        flex-grow: 1;
+        flex-grow: 1; /* Allow the header content to grow and fill the available space */
         justify-content: space-between;
+        /* padding: 20px; Adjust the padding as needed */
+        /* background-color: rgba(0, 0, 0, 0.7); Add a background color for the header content */
     }
 
    

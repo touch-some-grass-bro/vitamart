@@ -12,9 +12,9 @@
 <Router>
 
   <main>
-    <Route path ="sell"> <Sell/></Route>
     <Route path="login"> <Login/> </Route>
     <Route path="gender"> <Gender/> </Route>
+    <Route path="sell"> <Sell/> </Route>
     <Route path="buy"> <Buy/> </Route>
   </main>
 </Router>
