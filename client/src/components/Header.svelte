@@ -3,10 +3,8 @@
 </script>
 
 <main>
-    <div>
-        <header class="header">
-            <div class="header-content">
-                <img src="../public/buy.jpg" alt="Buy" class="bgimg">
+        <div class="header">
+            <div class="header-content align-text-top">
                 <div><img class="h-36 my-0" src="../public/Logo.svg" alt="Logo"></div>
                 <div class="my-auto"><h1 class="text-5xl font-bold">VITAMART</h1></div>
                 <div class="my-auto ml-auto flex">
@@ -14,35 +12,28 @@
                     <a>Sign Out</a>
                 </div>
             </div>
-        </header>
-    </div>
+        </div>
 </main>
 
 <style>
    @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
    
-   
+
    .header {
+        border-radius: 0 0 920px 0;
+        background-image: url('/public/buy.jpg');
+        background-size: cover;
+        height: 650px;
         display: flex;
         align-items: center;
-        background-color: transparent; /* Remove the background color if not needed */
-        position: relative;
-    }
-
-    .bgimg {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        z-index: -1; /* Place the image behind the header content */
-        border-radius: 0 0 50px 0;
+        padding-bottom: 27%;
+        margin-bottom: 50px;
     }
 
     .header-content {
         display: flex;
-        flex-grow: 1; /* Allow the header content to grow and fill the available space */
+        flex-grow: 1;
         justify-content: space-between;
-        /* padding: 20px; Adjust the padding as needed */
-        /* background-color: rgba(0, 0, 0, 0.7); Add a background color for the header content */
     }
 
    

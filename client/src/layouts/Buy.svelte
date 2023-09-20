@@ -13,8 +13,9 @@
 <TailwindCss/>
 <main>
     <Header img = {buy}/>
+    <div class="maincontainer">
     <h1 class="text-white text-3xl text-center">Products being sold</h1>
-    <div class="my-20 mx-10 grid grid-cols-3 gap-6">
+    <div class="my-20 mx-10 grid grid-cols-3 gap-6 ">
         {#each sellerdetail as seller}
         <button>
             <img class="relative rounded-lg bg-red-500 z-10" src="../public/sample.jpeg">
@@ -25,7 +26,7 @@
         </button>
         {/each}
     </div>
-    
+    </div>
 
     
 </main>
@@ -65,6 +66,10 @@ button img {
 button img:hover {
     transform: translateY(-100%);
     transition: transform 1s;
+}
+
+.maincontainer{
+    position: inherit;
 }
 
 

@@ -3,9 +3,9 @@
 
   import { Router, Route, Link } from "svelte-routing";
   import Login from "./layouts/Login.svelte";
-  import HostelPage from "./layouts/HostelPageog.svelte";
   import Gender from "./layouts/Gender.svelte";
   import Buy from "./layouts/Buy.svelte";
+  import Sell from "./layouts/sell.svelte";
 
 </script>
 
