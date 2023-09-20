@@ -38,6 +38,10 @@ func (s *Server) HandleRoutes(mainRouter *chi.Mux) {
 		handlers.IsAuthenticatedHandler(s.Queries),
 	)
 
+
+  // Chat
+  vitamartRouter.Get("/chat", handlers.JoinRoomHandler(s.Queries, s.ChatHub))
+
 	// Items
 	vitamartRouter.Get("/items", handlers.GetItemsHandler(s.Queries))
 	vitamartRouter.Post("/items", handlers.AddItemHandler(s.Queries))

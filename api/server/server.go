@@ -28,6 +28,7 @@ type Server struct {
 	DB        *sql.DB
 	OauthConf *oauth2.Config
 	Logger    zerolog.Logger
+  ChatHub   *models.ChatHub
 }
 
 func New() *Server {
@@ -46,6 +47,9 @@ func New() *Server {
 
 	s.PrepareOauth2()
 	s.PrepareRouter()
+
+  s.ChatHub = utils.NewHub()
+  go s.ChatHub.Run()
 
 	return s
 }
