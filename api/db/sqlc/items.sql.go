@@ -12,7 +12,6 @@ import (
 
 const createOrUpdateItem = `-- name: CreateOrUpdateItem :one
 INSERT INTO items (
-  id,
   name,
   description,
   image_binary,
@@ -20,18 +19,17 @@ INSERT INTO items (
   seller_email,
   created_at
 ) VALUES (
-  $1,$2,$3,$4,$5,$6,$7
+  $1,$2,$3,$4,$5,$6
 ) ON CONFLICT(id)
 DO UPDATE 
-SET name = $2,
-    description = $3,
-    image_binary = $4,
-    price = $5
+SET name = $1,
+    description = $2,
+    image_binary = $3,
+    price = $4
 RETURNING id, name, description, image_binary, price, seller_email, issold, created_at
 `
 
 type CreateOrUpdateItemParams struct {
-	ID          int64     `json:"id"`
 	Name        string    `json:"name"`
 	Description string    `json:"description"`
 	ImageBinary []byte    `json:"imageBinary"`
@@ -42,7 +40,6 @@ type CreateOrUpdateItemParams struct {
 
 func (q *Queries) CreateOrUpdateItem(ctx context.Context, arg CreateOrUpdateItemParams) (Item, error) {
 	row := q.db.QueryRowContext(ctx, createOrUpdateItem,
-		arg.ID,
 		arg.Name,
 		arg.Description,
 		arg.ImageBinary,
