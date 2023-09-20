@@ -2,7 +2,6 @@
     import TailwindCss from '../lib/TailwindCSS.svelte';
   import HeaderSell from '../components/HeaderSell.svelte';
 
-//   let sellname = '';
   
   let prodname = '';
   let proddes = '';

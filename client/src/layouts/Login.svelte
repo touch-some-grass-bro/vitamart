@@ -3,18 +3,18 @@
 </script>
   <TailwindCss/>
 <main>
-  <header class="flex bg-white justify-between fixed w-full">
+  <header class="Header flex  justify-between fixed w-full">
       <div class="mx-5"><button class="funt">VITAMART</button></div>
       <div class="mx-5 my-auto">
           <a href="#" class="px-7 text-2xl">Login</a>
-          <button class="rounded-xl started text-white px-5 py-3">Get Started</button>
+          <button class="started rounded-xl text-white px-5 py-3">Get Started</button>
       </div>
   </header>
   <div class="h-16"></div>
-  <div class="bluediv bg-blue-300 flex flex-col  items-center">
-      <h1 class="text-white text-center py-20 text-8xl">Feast. Share. Connect</h1>
-      <p class="text-white text-center py-1 text-2xl mx-auto">Introducing VitaMart, your one-stop online marketplace tailored exclusively for the vibrant community within our college hostel.</p>
-      <button class="rounded-xl started text-white px-5 py-3 mt-2">Get Started</button>
+  <div class="bluediv flex flex-col  items-center">
+      <h1 class="text-black text-center py-20 text-8xl">Feast. Share. Connect.</h1>
+      <p class="text-black text-center py-1 text-2xl mx-auto">Introducing VitaMart, your one-stop online marketplace tailored exclusively for the vibrant community within our college hostel.</p>
+      <button class="started rounded-xl  text-white px-5 py-3 mt-2">Get Started</button>
   </div>
 
   <div class="flex justify-between mx-5 py-5 gap-5">
@@ -47,14 +47,17 @@
  .smoldiv{
 
  }
+ .Header{
+  background-color: #2B6969;
+ }
   .funt{
-      padding-left: 1%;
-      font-family: "SKranji",cursive;
+    padding-left: 1%;
+    font-family: "SKranji",cursive;
     font-size: 50px;
-    color:rgb(193,226,0);
+    color:white;
   }
   .started{
-      background-color: rgb(193,226,0);
+      background-color: #5a8181;
   }
 
   p{
@@ -63,5 +66,14 @@
 
   .bluediv{
       height: 700px;
+      background-color: #edf2f2;
+  }
+
+  a{
+    color: #edf2f2;
+  }
+
+  a:hover{
+    color: #5a8181;
   }
 </style>
