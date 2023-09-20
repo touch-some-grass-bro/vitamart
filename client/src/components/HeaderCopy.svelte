@@ -3,19 +3,14 @@
 </script>
 
 <main>
-    <div>
         <header class="header">
-            <div class="header-content">
-                <img src="../public/buy.jpg" alt="Buy" class="bgimg">
                 <div><img class="h-36 my-0" src="../public/Logo.svg" alt="Logo"></div>
                 <div class="my-auto"><h1 class="text-5xl font-bold">VITAMART</h1></div>
                 <div class="my-auto ml-auto flex">
                     <a>Change Hostel Details</a>
                     <a>Sign Out</a>
                 </div>
-            </div>
         </header>
-    </div>
 </main>
 
 <style>
@@ -25,7 +20,7 @@
    .header {
         display: flex;
         align-items: center;
-        background-color: transparent; /* Remove the background color if not needed */
+        background-color: transparent;
         position: relative;
     }
 

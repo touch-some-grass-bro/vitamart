@@ -1,5 +1,7 @@
 <script>
   import TailwindCss from '../lib/TailwindCSS.svelte';
+
+  
 </script>
 
 <TailwindCss/>
@@ -10,6 +12,8 @@
       <p class="text-white">Feast. Share. Connect</p>
       <img class="h-80 m-auto" src="../public/Logo.svg">
       <button class="px-36 py-4 m-auto text-white">SignIn with Google</button>
+
+      
   </div>
 </main>
 

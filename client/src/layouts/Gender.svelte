@@ -1,14 +1,14 @@
 <script>
     import TailwindCss from '../lib/TailwindCSS.svelte';
     import Dropdown from '../components/Dropdown.svelte';
-    import Header from '../components/Header.svelte';
+    import HeaderCopy from '../components/HeaderCopy.svelte';
     let MENHOSTELS = ["A","B","C","D","D Annex","E","F","G","H","J","K","L","M","N","P","Q","R"];
     let FEMHOSTELS = ["A","B","C","D","E","F","G","H"];
   </script>
   
   <TailwindCss/>
   
-  <Header/>
+  <HeaderCopy/>
 
   <main>
     <div class="DIV1 py-20 px-56 rounded-lg ">
@@ -27,12 +27,5 @@
     .DIV1{
       box-shadow: 9px 10px 7px 1px rgba(38,38,38,0.94);
       background-color: rgb(46,79,79);
-    }
-      button:hover{
-        box-shadow: 9px 10px 7px 1px rgba(38,38,38,0.54);
-        transition: box-shadow 0.25s ease-in-out;
-      }
-    button{
-      background-color: rgb(193,226,0);
     }
   </style>

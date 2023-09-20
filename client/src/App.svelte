@@ -4,6 +4,7 @@
   import { Router, Route, Link } from "svelte-routing";
   import Login from "./layouts/Login.svelte";
   import Gender from "./layouts/Gender.svelte";
+  import Buy from "./layouts/Buy.svelte";
   import Sell from "./layouts/sell.svelte";
 
 </script>
@@ -14,6 +15,7 @@
     <Route path="login"> <Login/> </Route>
     <Route path="gender"> <Gender/> </Route>
     <Route path="sell"> <Sell/> </Route>
+    <Route path="buy"> <Buy/> </Route>
   </main>
 </Router>
 

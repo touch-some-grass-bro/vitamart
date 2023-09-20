@@ -2,19 +2,18 @@
 // @ts-nocheck
 
     import TailwindCss from "../lib/TailwindCSS.svelte";
-    import Header from "../components/Header.svelte";
-    let sellername = ["Param", "Milind", "Ishaan"];
+    import HeaderBuy from "../components/HeaderBuy.svelte";
     let sellerdetail = [{name:"Param",price:1200},{name:"Milind",price:300},{name:"Ishaan",price:50}];
-    let pricelist = [1200,300,23];
-    let buy = "../public/buy.jpg";
+    let buy = '../public/buy.jpg';
 
 </script>
 
 <TailwindCss/>
 <main>
-    <Header img = {buy}/>
+    <HeaderBuy/>
+    <div>
     <h1 class="text-white text-3xl text-center">Products being sold</h1>
-    <div class="my-20 mx-10 grid grid-cols-3 gap-6">
+    <div class="my-20 mx-10 grid grid-cols-3 gap-6 ">
         {#each sellerdetail as seller}
         <button>
             <img class="relative rounded-lg bg-red-500 z-10" src="../public/sample.jpeg">
@@ -25,7 +24,7 @@
         </button>
         {/each}
     </div>
-    
+    </div>
 
     
 </main>
@@ -66,6 +65,7 @@ button img:hover {
     transform: translateY(-100%);
     transition: transform 1s;
 }
+
 
 
 </style>
