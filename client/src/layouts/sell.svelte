@@ -6,31 +6,34 @@
 <TailwindCss/>
 
 <main>
-    <header class="flex h-60px align-middle">
+    <!-- <header class="flex h-60px align-middle">
         <div><img class="Main_Image max-w-full my-0 " src="../public/SELL.jpeg"></div>
         <div><img class="top-left1 h-36 my-0" src="../public/Logo.svg"></div>
         <div class="top-left2 my-auto"><h1 class="text-5xl font-bold">VITAMART</h1></div>
-        <div class="top-right my-auto ml-auto flex">
-            <a>Change Hostel Details</a>
-            <a>Sign Out</a>
+        <div >
+            <button type="submit" class="top-right my-auto ml-auto flex"><img class=" h-14 w-14" src="../public/Settings.svg"></button>
+                
         </div>
-    </header>
+    </header> -->
 
     <div class="SellDiv">
         <p class="Heading text-white">SELL</p>
         <div>
-            <div class="texthere flex-2">Seller's Name <button class="px-16 text-xl font-semibold text-white "></button></div>
-            <div class="texthere flex-2">Room Number <button class="px-16 text-xl font-semibold text-white "></button></div>
-            <div class="texthere flex-2">Product Name <button class="px-16 text-xl font-semibold text-white "></button></div>
-            <div class="texthere flex-2">Product Description <button class="px-16 text-xl font-semibold text-white "></button></div>
-            <div class="texthere flex-2">Price <button class="px-16 text-xl font-semibold text-white "></button></div>
+            <div class="texthere flex-2">Seller's Name <input type="text" class="px-16 text-xl font-semibold text-black "></div>
+            <div class="texthere flex-2">Room Number <input class="px-16 text-xl font-semibold text-black "></div>
+            <div class="texthere flex-2">Product Name <input class="px-16 text-xl font-semibold text-black "></div>
+            <div class="texthere flex-2">Product Description <input class="px-16 text-xl font-semibold text-black "></div>
+            <div class="texthere flex-2">Price <input class="px-16 text-xl font-semibold text-black "></div>
+            <div><input type="file"></div>
+            <div><button class="SUB">Submit</button> </div>
+            
         </div>
     </div>
 </main>     
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-    button{
+    .button{
         background-color: white;
         height: 36px;
         width: 50%;
@@ -53,29 +56,69 @@
     }
     .texthere{
         color:rgb(193,226,0);
-        font-family: 'Shadows Into Light', cursive;
         font-size: 50px;
     }
     .top-left1{
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 16px;
     }
     .top-left2 {
-        position: absolute;
+        position: fixed;
         top: 30px;
         left: 130px;
     }
     .top-right {
-        position: absolute;
-        top: 55px;
+        position: fixed;
+        top: 24px;
         right: 16px;
-}
-    .Main_Image{
-        border-radius: 0px 0px 400px 0px;
     }
-    .Heading{
-        font-family: 'Shadows Into Light', cursive;
-        font-size: 100px;
+    .Join {
+        background-color: white;
+        color: rgb(41, 118, 211);
+        border-color: rgb(41, 118, 211);
+        border-style: solid;
+        border-width: 1.5px;
+        /* border: medium; */
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: background-color 0.6s,
+            color 0.6s;
+    }
+    .Join:hover{
+        color: white;
+        background-color: rgb(41, 118, 211);
+        }
+        .Join:active{
+        opacity: .7;
+        }
+        .Main_Image{
+            border-radius: 0px 0px 400px 0px;
+        }
+        .Heading{
+            font-family: 'Shadows Into Light', cursive;
+            font-size: 100px;
+    }
+
+    .SUB {
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none ;
+        height: 36px;
+        width: 105px;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: opacity 0.15s;
+    }
+    .SUB:hover{
+        opacity: 0.8;
+    }
+    .SUB:active{
+        opacity: 0.4;
     }
 </style>
