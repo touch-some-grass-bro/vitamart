@@ -28,11 +28,4 @@
       box-shadow: 9px 10px 7px 1px rgba(38,38,38,0.94);
       background-color: rgb(46,79,79);
     }
-      button:hover{
-        box-shadow: 9px 10px 7px 1px rgba(38,38,38,0.54);
-        transition: box-shadow 0.25s ease-in-out;
-      }
-    button{
-      background-color: rgb(193,226,0);
-    }
   </style>
