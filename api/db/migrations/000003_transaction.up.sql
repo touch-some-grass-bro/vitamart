@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS transactions (
+  id BIGSERIAL PRIMARY KEY,
+  item_id BIGINT NOT NULL,
+  buyer_email VARCHAR(300) NOT NULL
+);
