@@ -8,8 +8,9 @@
   
   <TailwindCss/>
   
+  <Header/>
+
   <main>
-    <Header/>
     <div class="DIV1 py-20 px-56 rounded-lg ">
       <p class="text-4xl font-semibold text-white text-center">Choose Your Hostel</p><br>
       <div class = "Div2 flex">
