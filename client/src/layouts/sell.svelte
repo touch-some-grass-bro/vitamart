@@ -1,6 +1,21 @@
 <script>
     import TailwindCss from '../lib/TailwindCSS.svelte';
   import HeaderSell from '../components/HeaderSell.svelte';
+
+  let sellname = '';
+  let roomname = '';
+  let prodname = '';
+  let proddes = '';
+  let price = '';
+
+  function handleSubmit() {
+    // Handle the form submission here
+    console.log('First Name:', sellname);
+    console.log('Room name:', roomname);
+    console.log('Product name', prodname);
+    console.log('Product description', proddes);
+    console.log('Price', price);
+  }
 </script>
 
 <TailwindCss/>
@@ -8,17 +23,32 @@
 <main>
     <HeaderSell/>
 
+    <p class="text">Hungry,Grab a snickers.</p>
+
     <div class="SellDiv">
         <p class="Heading text-white">SELL</p>
         <div>
-            <div class="texthere flex-2">Seller's Name <input type="text" class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Room Number <input class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Product Name <input class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Product Description <input class="px-16 text-xl font-semibold text-black "></div>
-            <div class="texthere flex-2">Price <input class="px-16 text-xl font-semibold text-black "></div>
-            <div><input type="file"></div>
-            <div><button class="SUB">Submit</button> </div>
-            
+            <form on:submit={handleSubmit}>
+                <label class="texthere" for="sellname">Seller's Name</label>
+                <input type="text" id="sellname" bind:value={sellname} /><br>
+
+                <label class="texthere" for="roomname">Room Number</label>
+                <input type="text" id="roomname" bind:value={roomname} /><br>
+
+                <label class="texthere" for="prodname">Product Name</label>
+                <input type="text" id="prodname" bind:value={prodname} /><br>
+
+                <label class="texthere" for="proddes">Product Description</label>
+                <input type="text" id="proddes" bind:value={proddes} /><br>
+
+                <label class="texthere" for="price">Price</label>
+                <input type="text" id="price" bind:value={price} /><br>
+                
+                <button type="submit">Submit</button>
+              </form>
+
+              
+              
         </div>
     </div>
 </main>     
@@ -62,4 +92,12 @@
         color:rgb(193,226,0);
         font-size:50px;
         }
+
+        p.text {
+             writing-mode: vertical-rl;
+        }
 </style>
+
+  
+  
+  
